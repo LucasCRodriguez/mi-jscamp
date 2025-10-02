@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --colorPrimario: #ececec;
+    --colorSecundario: #FF6600;
+    --textoPrimario: #242424;
+    --textoSecundario: #FFA500;
+}
+
+body {
+    font-family: system-ui;
+    background-color: var(--colorPrimario);
+    color: var(--textoPrimario);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem 1rem;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+main .sec1 {
+    background-image: linear-gradient(to top, rgba(235, 141, 79, 0.95), rgba(255, 165, 0, 0)), url('./background.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    color: #ececec;
+    text-wrap: balance;
+}
+
+main form {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+
+    .busqueda {
+        flex: 1;
+        padding: 0.6rem 0.75rem;
+        border: none;
+        border-radius: 6px;
+        background-color: transparent;
+        outline: none;
+        transition: all .5s ease-in-out;
+    }
+
+    button {
+        padding: 0.55rem 0.9rem;
+        font-size: 1rem;
+        border: none;
+        background: var(--colorSecundario);
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease-in-out;
+    }
+
+    button:hover{
+        background-color: var(--textoPrimario);
+        color: white;
+    }
+
+    .busqueda:focus{
+        color: var(--colorSecundario);
+        border: #afafaf 1px solid;
+    }
+}
